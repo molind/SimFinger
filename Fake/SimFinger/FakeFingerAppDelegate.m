@@ -49,7 +49,7 @@ void WindowFrameDidChangeCallback( AXObserverRef observer, AXUIElementRef elemen
 		
 		for(NSDictionary *application in applications)
 		{
-			if([[application objectForKey:@"NSApplicationName"] isEqualToString:@"iOS Simulator"])
+			if([[application objectForKey:@"NSApplicationBundleIdentifier"] isEqualToString:@"com.apple.iphonesimulator"])
 			{
 				pid_t pid = (pid_t)[[application objectForKey:@"NSApplicationProcessIdentifier"] integerValue];
 				
